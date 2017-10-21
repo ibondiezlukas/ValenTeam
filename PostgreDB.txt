@@ -1,5 +1,0 @@
-User: valen
-Pass: qwerty12345!
-
-
- Setting Bitnami application password to '7Zp0XVqHSXax' 
