@@ -1,0 +1,21 @@
+DB STRUCUTE
+
+
+    List of relations
+ Schema |    Name    | Type  |  Owner
+--------+------------+-------+----------
+ public | containers | table | postgres
+ public | users      | table | postgres
+
+
+
+TABLE: users
+
+CREATE TABLE users (user_id serial PRIMARY KEY, username VARCHAR (50) UNIQUE NOT NULL, password VARCHAR (50) NOT NULL, profile int);
+
+TABLE:   Containers
+
+
+CREATE TABLE containers (identificator VARCHAR (50), type VARCHAR (50), temperature int, distance bool, humidity int, fire bool);
+
+
