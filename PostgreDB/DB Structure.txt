@@ -16,6 +16,6 @@ CREATE TABLE users (user_id serial PRIMARY KEY, username VARCHAR (50) UNIQUE NOT
 TABLE:   Containers
 
 
-CREATE TABLE containers (identificator VARCHAR (50), type VARCHAR (50), temperature int, distance bool, humidity int);
+CREATE TABLE containers (identificator VARCHAR (50), type VARCHAR (50), temperature int, distance bool, humidity int, fire bool);
 
 
