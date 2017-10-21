@@ -1,0 +1,11 @@
+var pg = require(‘pg’)
+var connectionString = "postgres://postgres:7Zp0XVqHSXax@PostgreDB/104.45.16.227:5432/valen";
+var pgClient = new pg.Client(connectionString);
+pgClient.connect();
+var query = pgClient.query("SELECT identificator, distance, location from containers c1 INNER JOIN ( SELECT Max (date) date, identificator FROM containers GROUP BY indetificator ) AS c2  on c1.identificator=c2.identificator and c1.date=c2.date order by DESC");
+
+query.on("row", function(row,result){
+
+result.addRow(row);
+
+});
